@@ -1,6 +1,6 @@
 {
   "name": "parse-server",
-  "version": "4.5.1",
+  "version": "4.5.0",
   "description": "An express module providing a Parse-compatible API server",
   "main": "lib/index.js",
   "repository": {
@@ -10,7 +10,6 @@
   "files": [
     "bin/",
     "lib/",
-    "src/",
     "public_html/",
     "views/",
     "LICENSE",
@@ -106,8 +105,8 @@
     "posttest": "cross-env MONGODB_VERSION=${MONGODB_VERSION:=4.0.4} MONGODB_TOPOLOGY=${MONGODB_TOPOLOGY:=standalone} MONGODB_STORAGE_ENGINE=${MONGODB_STORAGE_ENGINE:=mmapv1} mongodb-runner stop",
     "coverage": "cross-env MONGODB_VERSION=${MONGODB_VERSION:=4.0.4} MONGODB_TOPOLOGY=${MONGODB_TOPOLOGY:=standalone} MONGODB_STORAGE_ENGINE=${MONGODB_STORAGE_ENGINE:=mmapv1} TESTING=1 nyc jasmine",
     "start": "node ./bin/parse-server",
-    "prepare": "npm run build",
     "prettier": "prettier --write '{src,spec}/{**/*,*}.js'",
+    "prepare": "npm run build",
     "postinstall": "node -p 'require(\"./postinstall.js\")()'"
   },
   "engines": {
